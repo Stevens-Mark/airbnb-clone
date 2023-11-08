@@ -3,15 +3,20 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 const Logo = () => {
-  const router = useRouter();
+  // const router = useRouter();
   return (
-  <Image
-    alt="logo"
-    className="hidden md:block cursor-pointer"
-    height={100}
-    width={100}
-    src="/images/logo.png"
-  />)
+    <div className="w-[100px] h-[31px] hidden md:block">
+      <Image
+        alt="logo"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="cursor-pointer w-full h-auto"
+        src="/images/logo.webp"
+        priority={true}
+      />
+    </div>
+  );
 };
 
 export default Logo;

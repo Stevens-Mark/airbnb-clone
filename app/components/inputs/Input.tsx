@@ -31,6 +31,7 @@ const Input: React.FC<InputProps> = ({
       )}
       <input
         id={id}
+        autoComplete={`current ${id}`}
         disabled={disabled}
         {...register(id, { required })}
         placeholder=" "
